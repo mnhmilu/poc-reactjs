@@ -1,0 +1,36 @@
+import logo from './logo.svg';
+import './App.css';
+import Sample from './Sample';
+import SimpleBadge from './SimpleBadge';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+      <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          New react learning experience
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          Learn React
+        </a>
+       <SimpleBadge/>
+      </header>
+      <body>Some body element
+
+
+      </body>
+      <footer>Some test footer</footer>
+    </div>
+  );
+}
+
+export default App;
