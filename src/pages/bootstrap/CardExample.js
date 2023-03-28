@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Component } from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { Card, Row, Col, Container, Button } from "react-bootstrap";
+
 import Holder from 'react-holder';
 
 function CardExample() {
@@ -15,14 +15,12 @@ function CardExample() {
   }, []);
 
   return (
-
-    <div>
-      <h1>Posts</h1>
-      <ul>
-        {data.map(item => (
-          <li key={item.id}>
-           <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
+    <Container>
+      <Row>
+        {data.map(item => (          
+          <Col key={item.id} xs={12} md={4} lg={3}>
+            <Card style={{ width: '18rem' }}>
+            <Card.Img src="https://via.placeholder.com/150x75" />
               <Card.Body>
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Text>
@@ -31,11 +29,11 @@ function CardExample() {
                 <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>
-
-          </li>
+            </Col>
         ))}
-      </ul>
-    </div>
+      </Row>
+    </Container>
+
   );
 }
 
